@@ -8,12 +8,14 @@ async function main() {
   console.log("👉 secp256k1 key pair is ", kp);
 
   const raw = kp.raw;
-  const ethPrivHex = "0x" + Buffer.from(raw).toString("hex");
-  console.log("👉 Ethereum private key:", ethPrivHex);
-  await writeFile(FILE, Buffer.from(raw).toString('hex')); // remark this line if you want to use same peer id
+//  await writeFile(FILE, Buffer.from(raw).toString('hex')); // remark this line if you want to use same peer id
 
   const hex = await readFile(FILE, "utf8");
   const raw2 = Uint8Array.from(Buffer.from(hex, "hex"));
+
+  const ethPrivHex = "0x" + Buffer.from(raw2).toString("hex");
+  console.log("👉 Ethereum private key:", ethPrivHex);
+
   const restored = privateKeyFromRaw(raw2, "secp256k1");
 
   // Create libp2p PeerId
