@@ -1,4 +1,4 @@
-# x
+# libp2p peer binds to a ethereum address
 
 To install dependencies:
 
