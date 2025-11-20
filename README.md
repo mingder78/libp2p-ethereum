@@ -20,25 +20,43 @@ This project was created using `bun init` in bun v1.1.20. [Bun](https://bun.sh) 
 
 ```sh
 $ bun dev
-
-$ bun run --hot index.ts
-👉 secp256k1 key pair is  Secp256k1PrivateKey {
-  type: "secp256k1",
-  raw: Uint8Array(32) [ 219, 130, 231, 64, 143, 190, 55, 224, 100, 16, 135, 85, 127, 53, 53, 163, 64, 73, 209, 157, 39, 246, 147, 159, 67, 180, 116, 24, 205, 152, 20, 52 ],
-  publicKey: Secp256k1PublicKey {
-    type: "secp256k1",
-    raw: Uint8Array(33) [ 3, 20, 61, 49, 254, 106, 5, 22, 163, 76, 90, 91, 30, 6, 41, 173, 62, 130, 235, 124, 118, 198, 27, 189, 205, 113, 3, 18, 39, 213, 138, 5, 178 ],
-    _key: Uint8Array(33) [ 3, 20, 61, 49, 254, 106, 5, 22, 163, 76, 90, 91, 30, 6, 41, 173, 62, 130, 235, 124, 118, 198, 27, 189, 205, 113, 3, 18, 39, 213, 138, 5, 178 ],
-    toMultihash: [Function: toMultihash],
-    toCID: [Function: toCID],
-    toString: [Function: toString],
-    equals: [Function: equals],
-    verify: [Function: verify],
-  },
-  equals: [Function: equals],
-  sign: [Function: sign],
-}
+$ DEBUG=libp2p:floodsub,🙋 node index.js
 👉 Ethereum private key: 0xdb82e7408fbe37e0641087557f3535a34049d19d27f6939f43b47418cd981434
+  libp2p:floodsub starting +0ms
+  libp2p:floodsub started +11ms
 ✅ PeerId: 16Uiu2HAmE1zdG92om3Y49m3ZeT5T3jAZCZ1w7JGWi93NWGRbjmW1
-✅ Multiaddrs:  []
+✅ Multiaddrs:  [
+  Multiaddr(/ip4/127.0.0.1/tcp/57995/p2p/16Uiu2HAmE1zdG92om3Y49m3ZeT5T3jAZCZ1w7JGWi93NWGRbjmW1),
+  Multiaddr(/ip4/192.168.1.113/tcp/57995/p2p/16Uiu2HAmE1zdG92om3Y49m3ZeT5T3jAZCZ1w7JGWi93NWGRbjmW1),
+  Multiaddr(/ip4/10.147.20.194/tcp/57995/p2p/16Uiu2HAmE1zdG92om3Y49m3ZeT5T3jAZCZ1w7JGWi93NWGRbjmW1)
+]
+  libp2p:floodsub starting +0ms
+  libp2p:floodsub started +2ms
+✅ node2 PeerId: 16Uiu2HAkvb94tve3vdHVkjmK4pdhNeng7KAxxDrSXHWXo27qUZoW
+✅ node2 Multiaddrs:  [
+  Multiaddr(/ip4/127.0.0.1/tcp/57996/p2p/16Uiu2HAkvb94tve3vdHVkjmK4pdhNeng7KAxxDrSXHWXo27qUZoW),
+  Multiaddr(/ip4/192.168.1.113/tcp/57996/p2p/16Uiu2HAkvb94tve3vdHVkjmK4pdhNeng7KAxxDrSXHWXo27qUZoW),
+  Multiaddr(/ip4/10.147.20.194/tcp/57996/p2p/16Uiu2HAkvb94tve3vdHVkjmK4pdhNeng7KAxxDrSXHWXo27qUZoW)
+]
+  libp2p:floodsub subscribe to topic: news +184ms
+  libp2p:floodsub subscribe to topic: news +129ms
+  libp2p:floodsub connected 16Uiu2HAkvb94tve3vdHVkjmK4pdhNeng7KAxxDrSXHWXo27qUZoW +79ms
+  libp2p:floodsub new peer 16Uiu2HAmE1zdG92om3Y49m3ZeT5T3jAZCZ1w7JGWi93NWGRbjmW1 +96ms
+  libp2p:floodsub connected 16Uiu2HAmE1zdG92om3Y49m3ZeT5T3jAZCZ1w7JGWi93NWGRbjmW1 +5ms
+  libp2p:floodsub new peer 16Uiu2HAkvb94tve3vdHVkjmK4pdhNeng7KAxxDrSXHWXo27qUZoW +28ms
+  libp2p:floodsub rpc from 16Uiu2HAmE1zdG92om3Y49m3ZeT5T3jAZCZ1w7JGWi93NWGRbjmW1 +10ms
+  libp2p:floodsub subscription update from 16Uiu2HAmE1zdG92om3Y49m3ZeT5T3jAZCZ1w7JGWi93NWGRbjmW1 +0ms
+  libp2p:floodsub rpc from 16Uiu2HAkvb94tve3vdHVkjmK4pdhNeng7KAxxDrSXHWXo27qUZoW +8ms
+  libp2p:floodsub subscription update from 16Uiu2HAkvb94tve3vdHVkjmK4pdhNeng7KAxxDrSXHWXo27qUZoW +0ms
+  libp2p:floodsub connected 16Uiu2HAmE1zdG92om3Y49m3ZeT5T3jAZCZ1w7JGWi93NWGRbjmW1 +770ms
+  libp2p:floodsub outbound pubsub stream already present on connection from 16Uiu2HAmE1zdG92om3Y49m3ZeT5T3jAZCZ1w7JGWi93NWGRbjmW1 +0ms
+  libp2p:floodsub connected 16Uiu2HAkvb94tve3vdHVkjmK4pdhNeng7KAxxDrSXHWXo27qUZoW +796ms
+  libp2p:floodsub outbound pubsub stream already present on connection from 16Uiu2HAkvb94tve3vdHVkjmK4pdhNeng7KAxxDrSXHWXo27qUZoW +0ms
+  libp2p:floodsub publish topic: news from: 16Uiu2HAkvb94tve3vdHVkjmK4pdhNeng7KAxxDrSXHWXo27qUZoW data: QmlyZCBiaXJkIGJpcmQsIGJpcmQgaXMgdGhlIHdvcmQh +122ms
+  libp2p:floodsub publish msgs on topics news 16Uiu2HAmE1zdG92om3Y49m3ZeT5T3jAZCZ1w7JGWi93NWGRbjmW1 +5ms
+  libp2p:floodsub rpc from 16Uiu2HAkvb94tve3vdHVkjmK4pdhNeng7KAxxDrSXHWXo27qUZoW +99ms
+  libp2p:floodsub messages from 16Uiu2HAkvb94tve3vdHVkjmK4pdhNeng7KAxxDrSXHWXo27qUZoW +0ms
+  🙋 16Ui...UZoW sent: Bird bird bird, bird is the word! on topic: news +0ms
+node1 received: Bird bird bird, bird is the word! on topic: news
+  libp2p:floodsub not sending message on topic news to sender 16Uiu2HAkvb94tve3vdHVkjmK4pdhNeng7KAxxDrSXHWXo27qUZoW +14ms
 ```

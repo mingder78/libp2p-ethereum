@@ -1,37 +1,56 @@
 {
   "name": "libp2p-ethereum",
   "description": "use secp256k1 for creating libp2p peer to bind with ethereum address",
-  "version": "0.0.3",
-  "module": "index.ts",
-  "type": "module",
+  "version": "0.1.0",
+  "license": "Apache-2.0 OR MIT",
   "scripts": {
-    "dev": "bun run --hot index.ts"
+    "dev": "DEBUG=libp2p:floodsub,🙋 node index.js",
+    "test": "test-node-example test/*"
   },
-  "devDependencies": {
-    "@types/bun": "latest"
+  "homepage": "https://github.com/mingder78/libp2p-ethereum#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mingder78/libp2p-ethereum.git"
   },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+  "bugs": {
+    "url": "https://github.com/mingder78/libp2p-ethereum/issues"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "type": "module",
+  "private": true,
+  "files": [
+    "src",
+    "dist",
+    "!dist/test",
+    "!**/*.tsbuildinfo"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./src/index.js"
+    }
   },
   "dependencies": {
-    "@chainsafe/libp2p-gossipsub": "^14.1.1",
-    "@chainsafe/libp2p-noise": "^16.1.4",
-    "@chainsafe/libp2p-yamux": "^7.0.4",
+    "@chainsafe/libp2p-noise": "^17.0.0",
+    "@chainsafe/libp2p-yamux": "^8.0.0",
+    "@libp2p/floodsub": "^11.0.1",
+    "@libp2p/identify": "^4.0.1",
+    "@libp2p/tcp": "^11.0.1",
     "@libp2p/autonat": "^2.0.37",
     "@libp2p/bootstrap": "^11.0.43",
     "@libp2p/circuit-relay-v2": "^3.2.20",
     "@libp2p/crypto": "^5.1.13",
-    "@libp2p/identify": "^3.0.37",
     "@libp2p/interface-keys": "^1.0.8",
     "@libp2p/interface-peer-id": "^2.0.2",
     "@libp2p/interface-pubsub": "^4.0.1",
     "@libp2p/logger": "^5.1.21",
     "@libp2p/mdns": "^12.0.10",
-    "@libp2p/pubsub-peer-discovery": "^11.0.2",
-    "@libp2p/tcp": "^10.1.17",
     "@libp2p/webrtc": "^5.2.20",
     "@libp2p/websockets": "^9.2.17",
     "@libp2p/webtransport": "^5.0.47",
+    "@libp2p/pubsub-peer-discovery": "^11.0.2",
     "@multiformats/multiaddr": "^12.3.0",
     "@multiformats/multiaddr-matcher": "^1.2.4",
     "@nodeutils/defaults-deep": "^1.1.0",
@@ -40,7 +59,9 @@
     "libp2p": "^3.1.2",
     "p-all": "^5.0.1",
     "p-map": "^7.0.4",
-    "uint8arrays": "^5.1.0",
-    "viem": "^2.39.3"
+    "uint8arrays": "^5.1.0"
+  },
+  "devDependencies": {
+    "test-ipfs-example": "^1.1.0"
   }
 }
